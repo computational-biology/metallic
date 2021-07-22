@@ -1,5 +1,6 @@
 synopsis:
-	This program is for finding metal binding sites.
+
+		This program is for finding metal binding sites.
 
 
 install:
@@ -22,9 +23,11 @@ setup:
 
 
 run:    
+
 		metallic [optional switches] <accn>.cif
 
 example:
+
 		metallic 1ehz.cif
 
 bug-report:
