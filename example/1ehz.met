@@ -1,0 +1,910 @@
+mmCIF        : 1ehz
+Date         : Thu Jul 22 20:05:29 2021
+
+No of Nucleic Acids found:     76
+              1MA : 1    
+              2MG : 1    
+              5MC : 2    
+              5MU : 1    
+              7MG : 1    
+              A   : 17   
+              C   : 15   
+              G   : 18   
+              H2U : 2    
+              M2G : 1    
+              OMC : 1    
+              OMG : 1    
+              PSU : 2    
+              U   : 12   
+              YYG : 1    
+
+-------------------------------------
+         Total Types found: 15
+
+No of Amino Acids found:      0
+No of metals found:      9
+              MG  : 6    
+              MN  : 3    
+
+-------------------------------------
+         Total Types found: 2
+
+Total no of Water Molecules found :    160
+
+
+
+
+
+            +---------------------- S U M M A R Y  R E P O R T ---------------------+
+
+
+
+      |  Metal Detail  |   Inner Coordination     |     Water Mediated          |
+      ---------------------------------------------------------------------------
+       resid  chn  mtl  cord   NUC  PRO  H2O  MET    cnt     NUC  PRO  H2O  MET 
+      ---------------------------------------------------------------------------
+SUMM     590  A    MG     4 =    4    0    0    0      0  =    0    0    0    0
+SUMM     530  A    MN     6 =    2    0    4    0     14  =   11    0    3    0
+SUMM     510  A    MG     5 =    0    0    5    0     12  =   10    0    2    0
+SUMM     520  A    MN     6 =    1    0    5    0      6  =    6    0    0    0
+SUMM     540  A    MG     5 =    2    0    3    0      3  =    1    0    2    0
+SUMM     560  A    MG     6 =    0    0    6    0     17  =   11    0    6    0
+SUMM     570  A    MG     6 =    0    0    6    0     13  =    7    0    6    0
+SUMM     580  A    MG     5 =    2    0    3    0     10  =    5    0    5    0
+SUMM     550  A    MN     6 =    1    0    5    0     11  =    9    0    2    0
+#
+
+
+
+
+        +--------------------- D E T A I L  R E P O R T ---------------------+
+
+
+
+
+
+      |  Metal Detail       |   Base Pair Detsils               |   outcome                         |
+      ----------------------------------------------------------------------------------------------
+       resid  chn  mtl  lnk  loc  atm   resid  chn   resid  chn     pair------>> 
+      ----------------------------------------------------------------------------------------------
+BP       530  A    MN     1  PHP  OP1      19  A        56  A       G:C-W:WC    0.42  
+BP       520  A    MN     1  NUC  N7        1  A        72  A       G:C-W:WC    0.32  
+BP       580  A    MG     2  PHP  OP1       7  A        66  A       U:A-W:WC    0.24  
+BP       580  A    MG     2  PHP  OP2      14  A         8  A       A:U-H:WT    0.39  
+BP       550  A    MN     1  NUC  N7       15  A        48  A       G:C-W:WT    0.29  
+#
+
+
+      |  Metal Detail  |   Base Pair Detsils                                                       |
+      ----------------------------------------------------------------------------------------------
+       resid  chn  mtl sec  bp    type   atm         resid 
+      ----------------------------------------------------------------------------------------------
+MOTF                    C   A-
+MOTF     590  A   MG->  C YYG-           OP2            37
+MOTF                    C   A-
+
+
+MOTF                    C   A-
+MOTF     590  A   MG->  C YYG-           N7             37
+MOTF                    C   A-
+
+
+MOTF                    C YYG-
+MOTF     590  A   MG->  C   A-           N7             38
+MOTF                    C PSU-
+
+
+MOTF                    C YYG-
+MOTF     590  A   MG->  C   A-           N6             38
+MOTF                    C PSU-
+
+
+MOTF                    W   G-C   W:WT 
+MOTF     530  A   MN->  C H2U-           O2*            16
+MOTF                    C H2U-
+
+
+MOTF                    C   G-
+MOTF     530  A   MN->  W   G-C   W:WC   OP1            19
+MOTF                    C   G-
+
+
+MOTF                    W   G-C   W:WC 
+MOTF     530  A   MN-W- C   G-           N7             20
+MOTF                    C   A-
+
+
+MOTF                    W   G-C   W:WC 
+MOTF     530  A   MN-W- C   G-           O6             20
+MOTF                    C   A-
+
+
+MOTF                    N 1MA-5MU H:WT 
+MOTF     530  A   MN-W- C   U-           O4             59
+MOTF                    C   C-
+
+
+MOTF                    C   U-
+MOTF     530  A   MN-W- C   C-           N4             60
+MOTF                    H   C-G   W:WC 
+
+
+MOTF                    C H2U-
+MOTF     530  A   MN-W- C H2U-           OP1            17
+MOTF                    C   G-
+
+
+MOTF                    C H2U-
+MOTF     530  A   MN-W- C H2U-           O5*            17
+MOTF                    C   G-
+
+
+MOTF                    C   G-
+MOTF     530  A   MN-W- W   G-C   W:WC   OP2            19
+MOTF                    C   G-
+
+
+MOTF                    C   G-
+MOTF     530  A   MN-W- W   G-C   W:WC   O5*            19
+MOTF                    C   G-
+
+
+MOTF                    W   G-C   W:WC 
+MOTF     530  A   MN-W- C   G-           N7             20
+MOTF                    C   A-
+
+
+MOTF                    W   G-C   W:WC 
+MOTF     530  A   MN-W- C   G-           N7             20
+MOTF                    C   A-
+
+
+MOTF                    W   G-C   W:WC 
+MOTF     530  A   MN-W- C   G-           O6             20
+MOTF                    C   A-
+
+
+MOTF                    H   C-G   W:WC 
+MOTF     510  A   MG-W- H   G-C   W:WC   O6              3
+MOTF                    H   G-U   W:WC 
+
+
+MOTF                    H   G-C   W:WC 
+MOTF     510  A   MG-W- H   G-U   W:WC   N7              4
+MOTF                    H   A-U   W:WC 
+
+
+MOTF                    H   G-C   W:WC 
+MOTF     510  A   MG-W- H   G-U   W:WC   O6              4
+MOTF                    H   A-U   W:WC 
+
+
+MOTF                    H   G-U   W:WC 
+MOTF     510  A   MG-W- H   A-U   W:WC   N6              5
+MOTF                    H   U-A   W:WC 
+
+
+MOTF                    H   A-U   W:WC 
+MOTF     510  A   MG-W- H   U-A   W:WC   O4             68
+MOTF                    H   U-G   W:WC 
+
+
+MOTF                    H   U-A   W:WC 
+MOTF     510  A   MG-W- H   U-G   W:WC   O4             69
+MOTF                    H   C-G   W:WC 
+
+
+MOTF                    H   C-G   W:WC 
+MOTF     510  A   MG-W- H   G-C   W:WC   N7              3
+MOTF                    H   G-U   W:WC 
+
+
+MOTF                    H   C-G   W:WC 
+MOTF     510  A   MG-W- H   G-C   W:WC   O6              3
+MOTF                    H   G-U   W:WC 
+
+
+MOTF                    H   C-G   W:WC 
+MOTF     510  A   MG-W- H   G-C   W:WC   O6              3
+MOTF                    H   G-U   W:WC 
+
+
+MOTF                    H   U-A   W:WC 
+MOTF     510  A   MG-W- H   U-G   W:WC   O4             69
+MOTF                    H   C-G   W:WC 
+
+
+MOTF     520  A   MN->  H   G-C   W:WC   N7              1
+MOTF                    H   C-G   W:WC 
+
+
+MOTF     520  A   MN-W- H   G-C   W:WC   O6              1
+MOTF                    H   C-G   W:WC 
+
+
+MOTF                    H   C-G   W:WC 
+MOTF     520  A   MN-W- C   A-           N6             73
+MOTF                    C   C-
+
+
+MOTF                    H   C-G   W:WC 
+MOTF     520  A   MN-W- C   A-           N1             73
+MOTF                    C   C-
+
+
+MOTF     520  A   MN-W- H   G-C   W:WC   OP1             1
+MOTF                    H   C-G   W:WC 
+
+
+MOTF     520  A   MN-W- H   G-C   W:WC   O5*             1
+MOTF                    H   C-G   W:WC 
+
+
+MOTF                    H   C-G   W:WC 
+MOTF     520  A   MN-W- C   A-           N1             73
+MOTF                    C   C-
+
+
+MOTF                    W   G-C   W:WC 
+MOTF     540  A   MG->  C   G-           OP1            20
+MOTF                    C   A-
+
+
+MOTF                    C   G-
+MOTF     540  A   MG->  C   A-           OP2            21
+MOTF                    T   G-C   W:WC 
+
+
+MOTF                    C   G-
+MOTF     540  A   MG-W- C   A-           OP1            21
+MOTF                    T   G-C   W:WC 
+
+
+MOTF                    H   C-G   W:WC 
+MOTF     560  A   MG-W- H   U-A   W:WC   O5*            12
+MOTF                    H   C-G   W:WC 
+
+
+MOTF                    H   U-A   W:WC 
+MOTF     560  A   MG-W- N   U-A   W:HT   OP1             8
+MOTF                    N   A-A   H:HT 
+
+
+MOTF                    N   U-A   W:HT 
+MOTF     560  A   MG-W- N   A-A   H:HT   OP1             9
+MOTF                    H 2MG-C   W:WC 
+
+
+MOTF                    H   U-A   W:WC 
+MOTF     560  A   MG-W- N   U-A   W:HT   OP1             8
+MOTF                    N   A-A   H:HT 
+
+
+MOTF                    N   U-A   W:HT 
+MOTF     560  A   MG-W- N   A-A   H:HT   OP2             9
+MOTF                    H 2MG-C   W:WC 
+
+
+MOTF                    H 2MG-C   W:WC 
+MOTF     560  A   MG-W- H   C-G   W:WC   OP2            11
+MOTF                    H   U-A   W:WC 
+
+
+MOTF                    H   U-A   W:WC 
+MOTF     560  A   MG-W- N   U-A   W:HT   OP1             8
+MOTF                    N   A-A   H:HT 
+
+
+MOTF                    N   U-A   W:HT 
+MOTF     560  A   MG-W- N   A-A   H:HT   OP2             9
+MOTF                    H 2MG-C   W:WC 
+
+
+MOTF                    H 2MG-C   W:WC 
+MOTF     560  A   MG-W- H   C-G   W:WC   OP1            11
+MOTF                    H   U-A   W:WC 
+
+
+MOTF                    H 2MG-C   W:WC 
+MOTF     560  A   MG-W- H   C-G   W:WC   OP2            11
+MOTF                    H   U-A   W:WC 
+
+
+MOTF                    H 2MG-C   W:WC 
+MOTF     560  A   MG-W- H   C-G   W:WC   O5*            11
+MOTF                    H   U-A   W:WC 
+
+
+MOTF                    H 5MC-G   W:WC 
+MOTF     570  A   MG-W- H   U-A   W:WC   O4             41
+MOTF                    H   G-C   W:WC 
+
+
+MOTF                    H M2G-A   W:WC 
+MOTF     570  A   MG-W- H   C-G   W:WC   N4             27
+MOTF                    H   C-G   W:WC 
+
+
+MOTF                    H   U-A   W:WC 
+MOTF     570  A   MG-W- H   G-C   W:WC   O6             42
+MOTF                    H   G-C   W:WC 
+
+
+MOTF                    H   G-C   W:WC 
+MOTF     570  A   MG-W- H   G-C   W:WC   O6             43
+MOTF                    H   A-M2G W:WC 
+
+
+MOTF                    H   G-C   W:WC 
+MOTF     570  A   MG-W- H   C-2MG W:WC   OP2            25
+MOTF                    H M2G-A   W:WC 
+
+
+MOTF                    H 5MC-G   W:WC 
+MOTF     570  A   MG-W- H   U-A   W:WC   O4             41
+MOTF                    H   G-C   W:WC 
+
+
+MOTF                    H   U-A   W:WC 
+MOTF     570  A   MG-W- H   G-C   W:WC   N7             42
+MOTF                    H   G-C   W:WC 
+
+
+MOTF                    H   U-A   W:WC 
+MOTF     580  A   MG->  H   U-A   W:WC   OP1             7
+MOTF                    N   U-A   W:HT 
+
+
+MOTF                    H   C-G   W:WC 
+MOTF     580  A   MG->  N   A-U   H:WT   OP2            14
+MOTF                    W   G-C   W:WT 
+
+
+MOTF                    H   A-U   W:WC 
+MOTF     580  A   MG-W- H   U-A   W:WC   O3*             6
+MOTF                    H   U-A   W:WC 
+
+
+MOTF                    H   U-A   W:WC 
+MOTF     580  A   MG-W- N   U-A   W:HT   O4              8
+MOTF                    N   A-A   H:HT 
+
+
+MOTF                    H   U-A   W:WC 
+MOTF     580  A   MG-W- N   U-A   W:HT   O4              8
+MOTF                    N   A-A   H:HT 
+
+
+MOTF                    N   A-U   H:WT 
+MOTF     580  A   MG-W- W   G-C   W:WT   OP2            15
+MOTF                    C H2U-
+
+
+MOTF                    N   A-U   H:WT 
+MOTF     580  A   MG-W- W   G-C   W:WT   N7             15
+MOTF                    C H2U-
+
+
+MOTF                    N   A-U   H:WT 
+MOTF     550  A   MN->  W   G-C   W:WT   N7             15
+MOTF                    C H2U-
+
+
+MOTF                    H   U-A   W:WC 
+MOTF     550  A   MN-W- H   U-A   W:WC   OP1             7
+MOTF                    N   U-A   W:HT 
+
+
+MOTF                    N   A-U   H:WT 
+MOTF     550  A   MN-W- W   G-C   W:WT   OP2            15
+MOTF                    C H2U-
+
+
+MOTF                    N   A-U   H:WT 
+MOTF     550  A   MN-W- W   G-C   W:WT   O5*            15
+MOTF                    C H2U-
+
+
+MOTF                    H   U-A   W:WC 
+MOTF     550  A   MN-W- N   U-A   W:HT   O4              8
+MOTF                    N   A-A   H:HT 
+
+
+MOTF                    H   C-G   W:WC 
+MOTF     550  A   MN-W- N   A-U   H:WT   OP2            14
+MOTF                    W   G-C   W:WT 
+
+
+MOTF                    N   A-U   H:WT 
+MOTF     550  A   MN-W- W   G-C   W:WT   OP2            15
+MOTF                    C H2U-
+
+
+MOTF                    W   G-C   W:WT 
+MOTF     550  A   MN-W- C H2U-           N3             16
+MOTF                    C H2U-
+
+
+MOTF                    H   U-A   W:WC 
+MOTF     550  A   MN-W- H   U-A   W:WC   OP1             7
+MOTF                    N   U-A   W:HT 
+
+
+MOTF                    H   U-A   W:WC 
+MOTF     550  A   MN-W- H   U-A   W:WC   OP2             7
+MOTF                    N   U-A   W:HT 
+
+
+#
+
+
+      |  Metal Detail   | Water Detsils   |      Base Pair Details             |  outcome          |
+      ----------------------------------------------------------------------------------------------
+       resid  chn  mtl    resid  chn  res  loc  atm   resid  chn   resid  chn     pair------>> 
+      ----------------------------------------------------------------------------------------------
+WMBP     530  A    MN       709  A    HOH  PHP  OP2      19  A        56  A       G:C-W:WC    0.42  
+WMBP     530  A    MN       710  A    HOH  SUG  O5*      19  A        56  A       G:C-W:WC    0.42  
+
+WMBP     510  A    MG       712  A    HOH  NUC  O6        3  A        70  A       G:C-W:WC    0.19  
+WMBP     510  A    MG       712  A    HOH  NUC  N7        4  A        69  A       G:U-W:WC    0.11  
+WMBP     510  A    MG       712  A    HOH  NUC  O6        4  A        69  A       G:U-W:WC    0.11  
+WMBP     510  A    MG       712  A    HOH  NUC  N6        5  A        68  A       A:U-W:WC    0.24  
+WMBP     510  A    MG       714  A    HOH  NUC  O4       68  A         5  A       U:A-W:WC    0.24  
+WMBP     510  A    MG       714  A    HOH  NUC  O4       69  A         4  A       U:G-W:WC    0.11  
+WMBP     510  A    MG       715  A    HOH  NUC  N7        3  A        70  A       G:C-W:WC    0.19  
+WMBP     510  A    MG       715  A    HOH  NUC  O6        3  A        70  A       G:C-W:WC    0.19  
+WMBP     510  A    MG       716  A    HOH  NUC  O6        3  A        70  A       G:C-W:WC    0.19  
+WMBP     510  A    MG       716  A    HOH  NUC  O4       69  A         4  A       U:G-W:WC    0.11  
+
+WMBP     520  A    MN       717  A    HOH  NUC  O6        1  A        72  A       G:C-W:WC    0.32  
+WMBP     520  A    MN       718  A    HOH  PHP  OP1       1  A        72  A       G:C-W:WC    0.32  
+WMBP     520  A    MN       718  A    HOH  SUG  O5*       1  A        72  A       G:C-W:WC    0.32  
+
+WMBP     560  A    MG       725  A    HOH  SUG  O5*      12  A        23  A       U:A-W:WC    0.15  
+WMBP     560  A    MG       726  A    HOH  PHP  OP1       8  A        14  A       U:A-W:HT    0.39  
+WMBP     560  A    MG       726  A    HOH  PHP  OP1       9  A        23  A       A:A-H:HT    0.68  
+WMBP     560  A    MG       727  A    HOH  PHP  OP1       8  A        14  A       U:A-W:HT    0.39  
+WMBP     560  A    MG       728  A    HOH  PHP  OP2       9  A        23  A       A:A-H:HT    0.68  
+WMBP     560  A    MG       728  A    HOH  PHP  OP2      11  A        24  A       C:G-W:WC    0.27  
+WMBP     560  A    MG       729  A    HOH  PHP  OP1       8  A        14  A       U:A-W:HT    0.39  
+WMBP     560  A    MG       729  A    HOH  PHP  OP2       9  A        23  A       A:A-H:HT    0.68  
+WMBP     560  A    MG       730  A    HOH  PHP  OP1      11  A        24  A       C:G-W:WC    0.27  
+WMBP     560  A    MG       730  A    HOH  PHP  OP2      11  A        24  A       C:G-W:WC    0.27  
+WMBP     560  A    MG       730  A    HOH  SUG  O5*      11  A        24  A       C:G-W:WC    0.27  
+
+WMBP     570  A    MG       731  A    HOH  NUC  O4       41  A        29  A       U:A-W:WC    0.15  
+WMBP     570  A    MG       734  A    HOH  NUC  N4       27  A        43  A       C:G-W:WC    0.26  
+WMBP     570  A    MG       734  A    HOH  NUC  O6       42  A        28  A       G:C-W:WC    0.24  
+WMBP     570  A    MG       734  A    HOH  NUC  O6       43  A        27  A       G:C-W:WC    0.26  
+WMBP     570  A    MG       735  A    HOH  PHP  OP2      25  A        10  A       C:2MG-W:WC    0.20  
+WMBP     570  A    MG       736  A    HOH  NUC  O4       41  A        29  A       U:A-W:WC    0.15  
+WMBP     570  A    MG       736  A    HOH  NUC  N7       42  A        28  A       G:C-W:WC    0.24  
+
+WMBP     580  A    MG       611  A    HOH  SUG  O3*       6  A        67  A       U:A-W:WC    0.27  
+WMBP     580  A    MG       737  A    HOH  NUC  O4        8  A        14  A       U:A-W:HT    0.39  
+WMBP     580  A    MG       740  A    HOH  NUC  O4        8  A        14  A       U:A-W:HT    0.39  
+WMBP     580  A    MG       740  A    HOH  PHP  OP2      15  A        48  A       G:C-W:WT    0.29  
+WMBP     580  A    MG       740  A    HOH  NUC  N7       15  A        48  A       G:C-W:WT    0.29  
+
+WMBP     550  A    MN       738  A    HOH  PHP  OP1       7  A        66  A       U:A-W:WC    0.24  
+WMBP     550  A    MN       739  A    HOH  PHP  OP2      15  A        48  A       G:C-W:WT    0.29  
+WMBP     550  A    MN       739  A    HOH  SUG  O5*      15  A        48  A       G:C-W:WT    0.29  
+WMBP     550  A    MN       740  A    HOH  NUC  O4        8  A        14  A       U:A-W:HT    0.39  
+WMBP     550  A    MN       740  A    HOH  PHP  OP2      14  A         8  A       A:U-H:WT    0.39  
+WMBP     550  A    MN       740  A    HOH  PHP  OP2      15  A        48  A       G:C-W:WT    0.29  
+WMBP     550  A    MN       742  A    HOH  PHP  OP1       7  A        66  A       U:A-W:WC    0.24  
+WMBP     550  A    MN       742  A    HOH  PHP  OP2       7  A        66  A       U:A-W:WC    0.24  
+
+
+
+        +---------------------S I T E    S U M M A R Y---------------------+
+
+      |  Metal Detail  |      Coordination atom detail    |
+      -----------------------------------------------------
+       resid  chn  mtl   loc  res  atm   resid  chn   dist
+      -----------------------------------------------------
+BIND     590  A    MG    PHP  YYG  OP2      37  A    2.531
+BIND     590  A    MG    NUC  YYG  N7       37  A    3.350
+BIND     590  A    MG    NUC  A    N7       38  A    3.093
+BIND     590  A    MG    NUC  A    N6       38  A    3.000
+#
+      |  Metal Detail  |  C-1 atom detail      |   C-2 atom detail      |      outcome            |
+      ---------------------------------------------------------------------------------------------
+       resid  chn  mtl   resid  chn  res  atm      resid  chn  res  atm     angle   energy
+      ---------------------------------------------------------------------------------------------
+ANGL     590  A    MG       37  A    YYG  OP2  :      37  A    YYG  N7     100.10
+ANGL     590  A    MG       37  A    YYG  OP2  :      38  A    A    N7     132.88
+ANGL     590  A    MG       37  A    YYG  OP2  :      38  A    A    N6     164.78
+ANGL     590  A    MG       37  A    YYG  N7   :      38  A    A    N7      63.57
+ANGL     590  A    MG       37  A    YYG  N7   :      38  A    A    N6      79.65
+ANGL     590  A    MG       38  A    A    N7   :      38  A    A    N6      60.76
+#
+
+
+        +---------------------S I T E    S U M M A R Y---------------------+
+
+      |  Metal Detail  |      Coordination atom detail    |
+      -----------------------------------------------------
+       resid  chn  mtl   loc  res  atm   resid  chn   dist
+      -----------------------------------------------------
+BIND     530  A    MN    SUG  H2U  O2*      16  A    2.338
+BIND     530  A    MN    PHP  G    OP1      19  A    2.187
+BIND     530  A    MN    H2O  HOH  O       708  A    2.001
+BIND     530  A    MN    H2O  HOH  O       709  A    2.005
+BIND     530  A    MN    H2O  HOH  O       710  A    1.997
+BIND     530  A    MN    H2O  HOH  O       711  A    2.008
+#
+      |  Metal Detail  |  C-1 atom detail      |   C-2 atom detail      |      outcome            |
+      ---------------------------------------------------------------------------------------------
+       resid  chn  mtl   resid  chn  res  atm      resid  chn  res  atm     angle   energy
+      ---------------------------------------------------------------------------------------------
+ANGL     530  A    MN       16  A    H2U  O2*  :      19  A    G    OP1    104.12
+ANGL     530  A    MN       16  A    H2U  O2*  :     708  A    HOH  O       85.13
+ANGL     530  A    MN       16  A    H2U  O2*  :     709  A    HOH  O       95.02
+ANGL     530  A    MN       16  A    H2U  O2*  :     710  A    HOH  O      160.44
+ANGL     530  A    MN       16  A    H2U  O2*  :     711  A    HOH  O       71.01
+ANGL     530  A    MN       19  A    G    OP1  :     708  A    HOH  O       92.50
+ANGL     530  A    MN       19  A    G    OP1  :     709  A    HOH  O       88.09
+ANGL     530  A    MN       19  A    G    OP1  :     710  A    HOH  O       94.89
+ANGL     530  A    MN       19  A    G    OP1  :     711  A    HOH  O      174.40
+ANGL     530  A    MN      708  A    HOH  O    :     709  A    HOH  O      179.34
+ANGL     530  A    MN      708  A    HOH  O    :     710  A    HOH  O       89.55
+ANGL     530  A    MN      708  A    HOH  O    :     711  A    HOH  O       89.86
+ANGL     530  A    MN      709  A    HOH  O    :     710  A    HOH  O       90.10
+ANGL     530  A    MN      709  A    HOH  O    :     711  A    HOH  O       89.59
+ANGL     530  A    MN      710  A    HOH  O    :     711  A    HOH  O       90.20
+#
+      |  Metal Detail  |   Water atom detail    |  Mediated atom detail  |      outcome            |
+      ----------------------------------------------------------------------------------------------
+       resid  chn  mtl   resid  chn  res  lnk      resid  chn  res  atm     loc    dist    angle
+      ----------------------------------------------------------------------------------------------
+WMED     530  A    MN      708  A    HOH    5         20  A    G    N7      NUC   3.609   85.630
+WMED     530  A    MN      708  A    HOH    5         20  A    G    O6      NUC   3.643   91.425
+WMED     530  A    MN      708  A    HOH    5         59  A    U    O4      NUC   2.890   110.778
+WMED     530  A    MN      708  A    HOH    5         60  A    C    N4      NUC   3.000   106.485
+WMED     530  A    MN      708  A    HOH    5        105  A    HOH  O       H2O   2.618   136.958
+WMED     530  A    MN      709  A    HOH    4         17  A    H2U  OP1     PHP   3.441   123.396
+WMED     530  A    MN      709  A    HOH    4         17  A    H2U  O5*     SUG   3.145   146.545
+WMED     530  A    MN      709  A    HOH    4         19  A    G    OP2     PHP   3.266   92.510
+WMED     530  A    MN      709  A    HOH    4        118  A    HOH  O       H2O   3.002   137.336
+WMED     530  A    MN      710  A    HOH    3         19  A    G    O5*     SUG   3.640   88.079
+WMED     530  A    MN      710  A    HOH    3         20  A    G    N7      NUC   2.732   114.206
+WMED     530  A    MN      710  A    HOH    3        145  A    HOH  O       H2O   2.632   140.855
+WMED     530  A    MN      711  A    HOH    2         20  A    G    N7      NUC   3.560   86.876
+WMED     530  A    MN      711  A    HOH    2         20  A    G    O6      NUC   2.693   126.012
+#
+
+
+        +---------------------S I T E    S U M M A R Y---------------------+
+
+      |  Metal Detail  |      Coordination atom detail    |
+      -----------------------------------------------------
+       resid  chn  mtl   loc  res  atm   resid  chn   dist
+      -----------------------------------------------------
+BIND     510  A    MG    H2O  HOH  O       712  A    2.001
+BIND     510  A    MG    H2O  HOH  O       713  A    1.999
+BIND     510  A    MG    H2O  HOH  O       714  A    2.003
+BIND     510  A    MG    H2O  HOH  O       715  A    2.004
+BIND     510  A    MG    H2O  HOH  O       716  A    2.005
+#
+      |  Metal Detail  |  C-1 atom detail      |   C-2 atom detail      |      outcome            |
+      ---------------------------------------------------------------------------------------------
+       resid  chn  mtl   resid  chn  res  atm      resid  chn  res  atm     angle   energy
+      ---------------------------------------------------------------------------------------------
+ANGL     510  A    MG      712  A    HOH  O    :     713  A    HOH  O      179.76
+ANGL     510  A    MG      712  A    HOH  O    :     714  A    HOH  O       90.06
+ANGL     510  A    MG      712  A    HOH  O    :     715  A    HOH  O       90.00
+ANGL     510  A    MG      712  A    HOH  O    :     716  A    HOH  O       89.75
+ANGL     510  A    MG      713  A    HOH  O    :     714  A    HOH  O       89.92
+ANGL     510  A    MG      713  A    HOH  O    :     715  A    HOH  O       90.02
+ANGL     510  A    MG      713  A    HOH  O    :     716  A    HOH  O       90.01
+ANGL     510  A    MG      714  A    HOH  O    :     715  A    HOH  O      179.84
+ANGL     510  A    MG      714  A    HOH  O    :     716  A    HOH  O       89.91
+ANGL     510  A    MG      715  A    HOH  O    :     716  A    HOH  O       89.94
+#
+      |  Metal Detail  |   Water atom detail    |  Mediated atom detail  |      outcome            |
+      ----------------------------------------------------------------------------------------------
+       resid  chn  mtl   resid  chn  res  lnk      resid  chn  res  atm     loc    dist    angle
+      ----------------------------------------------------------------------------------------------
+WMED     510  A    MG      712  A    HOH    5          3  A    G    O6      NUC   3.242   92.680
+WMED     510  A    MG      712  A    HOH    5          4  A    G    N7      NUC   3.658   151.374
+WMED     510  A    MG      712  A    HOH    5          4  A    G    O6      NUC   2.986   138.305
+WMED     510  A    MG      712  A    HOH    5          5  A    A    N6      NUC   3.359   131.737
+WMED     510  A    MG      712  A    HOH    5        707  A    HOH  O       H2O   3.527   109.018
+WMED     510  A    MG      714  A    HOH    3         68  A    U    O4      NUC   2.675   134.614
+WMED     510  A    MG      714  A    HOH    3         69  A    U    O4      NUC   3.278   96.420
+WMED     510  A    MG      714  A    HOH    3        626  A    HOH  O       H2O   3.710   95.916
+WMED     510  A    MG      715  A    HOH    2          3  A    G    N7      NUC   2.962   137.810
+WMED     510  A    MG      715  A    HOH    2          3  A    G    O6      NUC   3.366   89.032
+WMED     510  A    MG      716  A    HOH    2          3  A    G    O6      NUC   2.952   101.616
+WMED     510  A    MG      716  A    HOH    2         69  A    U    O4      NUC   2.806   112.641
+#
+
+
+        +---------------------S I T E    S U M M A R Y---------------------+
+
+      |  Metal Detail  |      Coordination atom detail    |
+      -----------------------------------------------------
+       resid  chn  mtl   loc  res  atm   resid  chn   dist
+      -----------------------------------------------------
+BIND     520  A    MN    NUC  G    N7        1  A    2.302
+BIND     520  A    MN    H2O  HOH  O       717  A    2.000
+BIND     520  A    MN    H2O  HOH  O       718  A    2.000
+BIND     520  A    MN    H2O  HOH  O       719  A    1.999
+BIND     520  A    MN    H2O  HOH  O       720  A    2.001
+BIND     520  A    MN    H2O  HOH  O       721  A    2.000
+#
+      |  Metal Detail  |  C-1 atom detail      |   C-2 atom detail      |      outcome            |
+      ---------------------------------------------------------------------------------------------
+       resid  chn  mtl   resid  chn  res  atm      resid  chn  res  atm     angle   energy
+      ---------------------------------------------------------------------------------------------
+ANGL     520  A    MN        1  A    G    N7   :     717  A    HOH  O       95.98
+ANGL     520  A    MN        1  A    G    N7   :     718  A    HOH  O       84.06
+ANGL     520  A    MN        1  A    G    N7   :     719  A    HOH  O       80.40
+ANGL     520  A    MN        1  A    G    N7   :     720  A    HOH  O       99.58
+ANGL     520  A    MN        1  A    G    N7   :     721  A    HOH  O      168.70
+ANGL     520  A    MN      717  A    HOH  O    :     718  A    HOH  O      179.96
+ANGL     520  A    MN      717  A    HOH  O    :     719  A    HOH  O       90.00
+ANGL     520  A    MN      717  A    HOH  O    :     720  A    HOH  O       89.98
+ANGL     520  A    MN      717  A    HOH  O    :     721  A    HOH  O       89.93
+ANGL     520  A    MN      718  A    HOH  O    :     719  A    HOH  O       90.01
+ANGL     520  A    MN      718  A    HOH  O    :     720  A    HOH  O       90.01
+ANGL     520  A    MN      718  A    HOH  O    :     721  A    HOH  O       90.03
+ANGL     520  A    MN      719  A    HOH  O    :     720  A    HOH  O      179.97
+ANGL     520  A    MN      719  A    HOH  O    :     721  A    HOH  O       90.00
+ANGL     520  A    MN      720  A    HOH  O    :     721  A    HOH  O       90.03
+#
+      |  Metal Detail  |   Water atom detail    |  Mediated atom detail  |      outcome            |
+      ----------------------------------------------------------------------------------------------
+       resid  chn  mtl   resid  chn  res  lnk      resid  chn  res  atm     loc    dist    angle
+      ----------------------------------------------------------------------------------------------
+WMED     520  A    MN      717  A    HOH    3          1  A    G    O6      NUC   2.730   106.800
+WMED     520  A    MN      717  A    HOH    3         73  A    A    N6      NUC   3.485   138.267
+WMED     520  A    MN      717  A    HOH    3         73  A    A    N1      NUC   3.336   99.647
+WMED     520  A    MN      718  A    HOH    2          1  A    G    OP1     PHP   2.770   140.921
+WMED     520  A    MN      718  A    HOH    2          1  A    G    O5*     SUG   3.395   139.187
+WMED     520  A    MN      719  A    HOH    1         73  A    A    N1      NUC   3.035   110.042
+#
+
+
+        +---------------------S I T E    S U M M A R Y---------------------+
+
+      |  Metal Detail  |      Coordination atom detail    |
+      -----------------------------------------------------
+       resid  chn  mtl   loc  res  atm   resid  chn   dist
+      -----------------------------------------------------
+BIND     540  A    MG    PHP  G    OP1      20  A    2.072
+BIND     540  A    MG    PHP  A    OP2      21  A    2.109
+BIND     540  A    MG    H2O  HOH  O       722  A    2.002
+BIND     540  A    MG    H2O  HOH  O       723  A    2.000
+BIND     540  A    MG    H2O  HOH  O       724  A    2.002
+#
+      |  Metal Detail  |  C-1 atom detail      |   C-2 atom detail      |      outcome            |
+      ---------------------------------------------------------------------------------------------
+       resid  chn  mtl   resid  chn  res  atm      resid  chn  res  atm     angle   energy
+      ---------------------------------------------------------------------------------------------
+ANGL     540  A    MG       20  A    G    OP1  :      21  A    A    OP2     81.71
+ANGL     540  A    MG       20  A    G    OP1  :     722  A    HOH  O      165.81
+ANGL     540  A    MG       20  A    G    OP1  :     723  A    HOH  O       97.14
+ANGL     540  A    MG       20  A    G    OP1  :     724  A    HOH  O       82.97
+ANGL     540  A    MG       21  A    A    OP2  :     722  A    HOH  O       87.75
+ANGL     540  A    MG       21  A    A    OP2  :     723  A    HOH  O       78.57
+ANGL     540  A    MG       21  A    A    OP2  :     724  A    HOH  O      101.53
+ANGL     540  A    MG      722  A    HOH  O    :     723  A    HOH  O       90.01
+ANGL     540  A    MG      722  A    HOH  O    :     724  A    HOH  O       89.90
+ANGL     540  A    MG      723  A    HOH  O    :     724  A    HOH  O      179.86
+#
+      |  Metal Detail  |   Water atom detail    |  Mediated atom detail  |      outcome            |
+      ----------------------------------------------------------------------------------------------
+       resid  chn  mtl   resid  chn  res  lnk      resid  chn  res  atm     loc    dist    angle
+      ----------------------------------------------------------------------------------------------
+WMED     540  A    MG      722  A    HOH    1         21  A    A    OP1     PHP   3.503   93.117
+WMED     540  A    MG      723  A    HOH    1        166  A    HOH  O       H2O   3.674   100.712
+WMED     540  A    MG      724  A    HOH    1        152  A    HOH  O       H2O   3.377   106.082
+#
+
+
+        +---------------------S I T E    S U M M A R Y---------------------+
+
+      |  Metal Detail  |      Coordination atom detail    |
+      -----------------------------------------------------
+       resid  chn  mtl   loc  res  atm   resid  chn   dist
+      -----------------------------------------------------
+BIND     560  A    MG    H2O  HOH  O       725  A    2.004
+BIND     560  A    MG    H2O  HOH  O       726  A    2.004
+BIND     560  A    MG    H2O  HOH  O       727  A    2.003
+BIND     560  A    MG    H2O  HOH  O       728  A    1.999
+BIND     560  A    MG    H2O  HOH  O       729  A    2.005
+BIND     560  A    MG    H2O  HOH  O       730  A    1.999
+#
+      |  Metal Detail  |  C-1 atom detail      |   C-2 atom detail      |      outcome            |
+      ---------------------------------------------------------------------------------------------
+       resid  chn  mtl   resid  chn  res  atm      resid  chn  res  atm     angle   energy
+      ---------------------------------------------------------------------------------------------
+ANGL     560  A    MG      725  A    HOH  O    :     726  A    HOH  O      179.84
+ANGL     560  A    MG      725  A    HOH  O    :     727  A    HOH  O       90.08
+ANGL     560  A    MG      725  A    HOH  O    :     728  A    HOH  O       89.76
+ANGL     560  A    MG      725  A    HOH  O    :     729  A    HOH  O       90.30
+ANGL     560  A    MG      725  A    HOH  O    :     730  A    HOH  O       89.86
+ANGL     560  A    MG      726  A    HOH  O    :     727  A    HOH  O       90.05
+ANGL     560  A    MG      726  A    HOH  O    :     728  A    HOH  O       90.11
+ANGL     560  A    MG      726  A    HOH  O    :     729  A    HOH  O       89.79
+ANGL     560  A    MG      726  A    HOH  O    :     730  A    HOH  O       90.05
+ANGL     560  A    MG      727  A    HOH  O    :     728  A    HOH  O      179.83
+ANGL     560  A    MG      727  A    HOH  O    :     729  A    HOH  O       89.91
+ANGL     560  A    MG      727  A    HOH  O    :     730  A    HOH  O       90.04
+ANGL     560  A    MG      728  A    HOH  O    :     729  A    HOH  O       90.04
+ANGL     560  A    MG      728  A    HOH  O    :     730  A    HOH  O       90.01
+ANGL     560  A    MG      729  A    HOH  O    :     730  A    HOH  O      179.83
+#
+      |  Metal Detail  |   Water atom detail    |  Mediated atom detail  |      outcome            |
+      ----------------------------------------------------------------------------------------------
+       resid  chn  mtl   resid  chn  res  lnk      resid  chn  res  atm     loc    dist    angle
+      ----------------------------------------------------------------------------------------------
+WMED     560  A    MG      725  A    HOH    2         12  A    U    O5*     SUG   3.681   144.269
+WMED     560  A    MG      725  A    HOH    2        139  A    HOH  O       H2O   2.884   132.438
+WMED     560  A    MG      726  A    HOH    3          8  A    U    OP1     PHP   2.823   112.377
+WMED     560  A    MG      726  A    HOH    3          9  A    A    OP1     PHP   2.942   122.026
+WMED     560  A    MG      726  A    HOH    3        226  A    HOH  O       H2O   2.923   116.946
+WMED     560  A    MG      727  A    HOH    2          8  A    U    OP1     PHP   3.524   89.426
+WMED     560  A    MG      727  A    HOH    2        206  A    HOH  O       H2O   2.639   125.166
+WMED     560  A    MG      728  A    HOH    4          9  A    A    OP2     PHP   3.710   86.094
+WMED     560  A    MG      728  A    HOH    4         11  A    C    OP2     PHP   2.952   116.949
+WMED     560  A    MG      728  A    HOH    4        101  A    HOH  O       H2O   2.795   128.291
+WMED     560  A    MG      728  A    HOH    4        226  A    HOH  O       H2O   3.494   96.840
+WMED     560  A    MG      729  A    HOH    3          8  A    U    OP1     PHP   3.658   85.643
+WMED     560  A    MG      729  A    HOH    3          9  A    A    OP2     PHP   2.707   119.857
+WMED     560  A    MG      729  A    HOH    3        101  A    HOH  O       H2O   3.737   92.850
+WMED     560  A    MG      730  A    HOH    3         11  A    C    OP1     PHP   3.484   136.181
+WMED     560  A    MG      730  A    HOH    3         11  A    C    OP2     PHP   3.605   94.230
+WMED     560  A    MG      730  A    HOH    3         11  A    C    O5*     SUG   3.669   116.335
+#
+
+
+        +---------------------S I T E    S U M M A R Y---------------------+
+
+      |  Metal Detail  |      Coordination atom detail    |
+      -----------------------------------------------------
+       resid  chn  mtl   loc  res  atm   resid  chn   dist
+      -----------------------------------------------------
+BIND     570  A    MG    H2O  HOH  O       731  A    2.001
+BIND     570  A    MG    H2O  HOH  O       732  A    2.009
+BIND     570  A    MG    H2O  HOH  O       733  A    2.002
+BIND     570  A    MG    H2O  HOH  O       734  A    2.001
+BIND     570  A    MG    H2O  HOH  O       735  A    1.996
+BIND     570  A    MG    H2O  HOH  O       736  A    2.001
+#
+      |  Metal Detail  |  C-1 atom detail      |   C-2 atom detail      |      outcome            |
+      ---------------------------------------------------------------------------------------------
+       resid  chn  mtl   resid  chn  res  atm      resid  chn  res  atm     angle   energy
+      ---------------------------------------------------------------------------------------------
+ANGL     570  A    MG      731  A    HOH  O    :     732  A    HOH  O      179.87
+ANGL     570  A    MG      731  A    HOH  O    :     733  A    HOH  O       90.17
+ANGL     570  A    MG      731  A    HOH  O    :     734  A    HOH  O       89.89
+ANGL     570  A    MG      731  A    HOH  O    :     735  A    HOH  O       89.92
+ANGL     570  A    MG      731  A    HOH  O    :     736  A    HOH  O       90.00
+ANGL     570  A    MG      732  A    HOH  O    :     733  A    HOH  O       89.87
+ANGL     570  A    MG      732  A    HOH  O    :     734  A    HOH  O       90.06
+ANGL     570  A    MG      732  A    HOH  O    :     735  A    HOH  O       89.96
+ANGL     570  A    MG      732  A    HOH  O    :     736  A    HOH  O       90.12
+ANGL     570  A    MG      733  A    HOH  O    :     734  A    HOH  O      179.91
+ANGL     570  A    MG      733  A    HOH  O    :     735  A    HOH  O       90.07
+ANGL     570  A    MG      733  A    HOH  O    :     736  A    HOH  O       89.95
+ANGL     570  A    MG      734  A    HOH  O    :     735  A    HOH  O       89.99
+ANGL     570  A    MG      734  A    HOH  O    :     736  A    HOH  O       89.99
+ANGL     570  A    MG      735  A    HOH  O    :     736  A    HOH  O      179.92
+#
+      |  Metal Detail  |   Water atom detail    |  Mediated atom detail  |      outcome            |
+      ----------------------------------------------------------------------------------------------
+       resid  chn  mtl   resid  chn  res  lnk      resid  chn  res  atm     loc    dist    angle
+      ----------------------------------------------------------------------------------------------
+WMED     570  A    MG      731  A    HOH    1         41  A    U    O4      NUC   3.071   123.684
+WMED     570  A    MG      732  A    HOH    3        147  A    HOH  O       H2O   3.405   111.144
+WMED     570  A    MG      732  A    HOH    3        148  A    HOH  O       H2O   2.858   124.021
+WMED     570  A    MG      732  A    HOH    3        219  A    HOH  O       H2O   3.091   121.433
+WMED     570  A    MG      734  A    HOH    4         27  A    C    N4      NUC   3.392   142.768
+WMED     570  A    MG      734  A    HOH    4         42  A    G    O6      NUC   2.650   124.664
+WMED     570  A    MG      734  A    HOH    4         43  A    G    O6      NUC   3.444   158.454
+WMED     570  A    MG      734  A    HOH    4        690  A    HOH  O       H2O   3.544   87.988
+WMED     570  A    MG      735  A    HOH    3         25  A    C    OP2     PHP   3.027   117.895
+WMED     570  A    MG      735  A    HOH    3        219  A    HOH  O       H2O   3.679   99.948
+WMED     570  A    MG      735  A    HOH    3        690  A    HOH  O       H2O   2.449   128.488
+WMED     570  A    MG      736  A    HOH    2         41  A    U    O4      NUC   3.753   98.299
+WMED     570  A    MG      736  A    HOH    2         42  A    G    N7      NUC   2.897   134.527
+#
+
+
+        +---------------------S I T E    S U M M A R Y---------------------+
+
+      |  Metal Detail  |      Coordination atom detail    |
+      -----------------------------------------------------
+       resid  chn  mtl   loc  res  atm   resid  chn   dist
+      -----------------------------------------------------
+BIND     580  A    MG    PHP  U    OP1       7  A    2.605
+BIND     580  A    MG    PHP  A    OP2      14  A    1.929
+BIND     580  A    MG    H2O  HOH  O       611  A    2.775
+BIND     580  A    MG    H2O  HOH  O       737  A    2.003
+BIND     580  A    MG    H2O  HOH  O       740  A    3.233
+#
+      |  Metal Detail  |  C-1 atom detail      |   C-2 atom detail      |      outcome            |
+      ---------------------------------------------------------------------------------------------
+       resid  chn  mtl   resid  chn  res  atm      resid  chn  res  atm     angle   energy
+      ---------------------------------------------------------------------------------------------
+ANGL     580  A    MG        7  A    U    OP1  :      14  A    A    OP2    145.53
+ANGL     580  A    MG        7  A    U    OP1  :     611  A    HOH  O       70.80
+ANGL     580  A    MG        7  A    U    OP1  :     737  A    HOH  O      105.51
+ANGL     580  A    MG        7  A    U    OP1  :     740  A    HOH  O       82.71
+ANGL     580  A    MG       14  A    A    OP2  :     611  A    HOH  O       87.77
+ANGL     580  A    MG       14  A    A    OP2  :     737  A    HOH  O       97.26
+ANGL     580  A    MG       14  A    A    OP2  :     740  A    HOH  O       67.05
+ANGL     580  A    MG      611  A    HOH  O    :     737  A    HOH  O      174.66
+ANGL     580  A    MG      611  A    HOH  O    :     740  A    HOH  O       80.86
+ANGL     580  A    MG      737  A    HOH  O    :     740  A    HOH  O      102.72
+#
+      |  Metal Detail  |   Water atom detail    |  Mediated atom detail  |      outcome            |
+      ----------------------------------------------------------------------------------------------
+       resid  chn  mtl   resid  chn  res  lnk      resid  chn  res  atm     loc    dist    angle
+      ----------------------------------------------------------------------------------------------
+WMED     580  A    MG      611  A    HOH    2          6  A    U    O3*     SUG   3.481   79.939
+WMED     580  A    MG      611  A    HOH    2        742  A    HOH  O       H2O   3.778   85.856
+WMED     580  A    MG      737  A    HOH    2          8  A    U    O4      NUC   2.926   106.773
+WMED     580  A    MG      737  A    HOH    2        141  A    HOH  O       H2O   2.528   125.150
+WMED     580  A    MG      740  A    HOH    6          8  A    U    O4      NUC   3.591   71.427
+WMED     580  A    MG      740  A    HOH    6         15  A    G    OP2     PHP   3.612   118.049
+WMED     580  A    MG      740  A    HOH    6         15  A    G    N7      NUC   3.288   152.139
+WMED     580  A    MG      740  A    HOH    6        738  A    HOH  O       H2O   2.829   99.563
+WMED     580  A    MG      740  A    HOH    6        739  A    HOH  O       H2O   2.830   145.134
+WMED     580  A    MG      740  A    HOH    6        742  A    HOH  O       H2O   2.829   96.282
+#
+
+
+        +---------------------S I T E    S U M M A R Y---------------------+
+
+      |  Metal Detail  |      Coordination atom detail    |
+      -----------------------------------------------------
+       resid  chn  mtl   loc  res  atm   resid  chn   dist
+      -----------------------------------------------------
+BIND     550  A    MN    NUC  G    N7       15  A    2.477
+BIND     550  A    MN    H2O  HOH  O       738  A    2.002
+BIND     550  A    MN    H2O  HOH  O       739  A    2.001
+BIND     550  A    MN    H2O  HOH  O       740  A    1.996
+BIND     550  A    MN    H2O  HOH  O       741  A    2.006
+BIND     550  A    MN    H2O  HOH  O       742  A    1.998
+#
+      |  Metal Detail  |  C-1 atom detail      |   C-2 atom detail      |      outcome            |
+      ---------------------------------------------------------------------------------------------
+       resid  chn  mtl   resid  chn  res  atm      resid  chn  res  atm     angle   energy
+      ---------------------------------------------------------------------------------------------
+ANGL     550  A    MN       15  A    G    N7   :     738  A    HOH  O       92.27
+ANGL     550  A    MN       15  A    G    N7   :     739  A    HOH  O       87.91
+ANGL     550  A    MN       15  A    G    N7   :     740  A    HOH  O       93.98
+ANGL     550  A    MN       15  A    G    N7   :     741  A    HOH  O       85.94
+ANGL     550  A    MN       15  A    G    N7   :     742  A    HOH  O      175.31
+ANGL     550  A    MN      738  A    HOH  O    :     739  A    HOH  O      179.72
+ANGL     550  A    MN      738  A    HOH  O    :     740  A    HOH  O       90.08
+ANGL     550  A    MN      738  A    HOH  O    :     741  A    HOH  O       90.01
+ANGL     550  A    MN      738  A    HOH  O    :     742  A    HOH  O       89.93
+ANGL     550  A    MN      739  A    HOH  O    :     740  A    HOH  O       90.12
+ANGL     550  A    MN      739  A    HOH  O    :     741  A    HOH  O       89.79
+ANGL     550  A    MN      739  A    HOH  O    :     742  A    HOH  O       89.88
+ANGL     550  A    MN      740  A    HOH  O    :     741  A    HOH  O      179.88
+ANGL     550  A    MN      740  A    HOH  O    :     742  A    HOH  O       90.16
+ANGL     550  A    MN      741  A    HOH  O    :     742  A    HOH  O       89.92
+#
+      |  Metal Detail  |   Water atom detail    |  Mediated atom detail  |      outcome            |
+      ----------------------------------------------------------------------------------------------
+       resid  chn  mtl   resid  chn  res  lnk      resid  chn  res  atm     loc    dist    angle
+      ----------------------------------------------------------------------------------------------
+WMED     550  A    MN      738  A    HOH    2          7  A    U    OP1     PHP   3.737   97.064
+WMED     550  A    MN      738  A    HOH    2        128  A    HOH  O       H2O   3.509   150.019
+WMED     550  A    MN      739  A    HOH    2         15  A    G    OP2     PHP   2.711   125.892
+WMED     550  A    MN      739  A    HOH    2         15  A    G    O5*     SUG   3.459   134.785
+WMED     550  A    MN      740  A    HOH    3          8  A    U    O4      NUC   3.591   115.617
+WMED     550  A    MN      740  A    HOH    3         14  A    A    OP2     PHP   3.052   165.828
+WMED     550  A    MN      740  A    HOH    3         15  A    G    OP2     PHP   3.612   92.742
+WMED     550  A    MN      741  A    HOH    1         16  A    H2U  N3      NUC   3.518   150.103
+WMED     550  A    MN      742  A    HOH    3          7  A    U    OP1     PHP   3.440   106.855
+WMED     550  A    MN      742  A    HOH    3          7  A    U    OP2     PHP   3.753   139.182
+WMED     550  A    MN      742  A    HOH    3        611  A    HOH  O       H2O   3.778   115.651
+#
+TER

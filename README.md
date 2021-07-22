@@ -1,5 +1,5 @@
 This program is for finding metal binding sites.
 
-run:    bpnet.linux [optional switches] 1ehz.cif 
+run:    metallic [optional switches] 1ehz.cif 
 
 
