@@ -10,7 +10,7 @@ install:
 
 		sudo cp bin/metallic   /usr/local/bin/
 
-		sudo cp src/*   /usr/local/bin/
+		sudo cp sys/*   /usr/local/bin/
 
 setup:
 	For setting the environment, do the following from your bash shell
