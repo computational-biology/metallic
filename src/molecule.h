@@ -52,6 +52,8 @@ void Molecule::scan_cif(char *ciffile,  int (*pf)(char *)) {
     //this->residue = new  Residue[size];
     //this->max = size;
     this ->size = 0;
+
+    
     char tokary[100][100];
     FILE* fp = fopen(ciffile, "r");
     assert(fp != NULL);
@@ -64,7 +66,7 @@ void Molecule::scan_cif(char *ciffile,  int (*pf)(char *)) {
     int resnameloc = -1;  // label_comp_id
     int chainloc = -1; // auth_asym_id
     int residloc = -1; // auth_seq_id
-//    int modelloc = -1; // pdbx_PDB_model_num
+    int modelloc = -1; // pdbx_PDB_model_num
     int occuloc  = -1; //occupancy
     int xloc = -1;
     int yloc = -1;
@@ -96,8 +98,8 @@ void Molecule::scan_cif(char *ciffile,  int (*pf)(char *)) {
             zloc = count;
         }else if(strncmp(line,"_atom_site.occupancy", 20) == 0 && line[20] != '_' ){
             occuloc = count;
-        }else if(strncmp(line,"_atom_site.pdbx_PDB_model_num", 29) == 0 && line[19] != '_' ){
-            ; //modelloc = count;
+        }else if(strncmp(line,"_atom_site.pdbx_PDB_model_num", 29) == 0 && line[29] != '_' ){
+            modelloc = count;
         }else{
             ;
         }
@@ -108,14 +110,16 @@ void Molecule::scan_cif(char *ciffile,  int (*pf)(char *)) {
     long prevresid = -999;
     char prevchain[10] = "-";
     long resindx = -1;
+    int modelflag=0;
+    int modelnum = -1;
     while(line[0] != '#'){
         int indx=0;
         token = strtok(line, sep);
         while(token != NULL){
-         //   printf("%s, ",token);
-            strcpy(tokary[indx], token);
-            indx++;
-            token = strtok(NULL, sep);
+//	         printf("%s, ",token);
+	      strcpy(tokary[indx], token);
+	      indx++;
+	      token = strtok(NULL, sep);
         }
 
         if(tokary[type_symbloc][0] == 'H'){ // We dont consider H
@@ -130,6 +134,14 @@ void Molecule::scan_cif(char *ciffile,  int (*pf)(char *)) {
         long resid = atol(tokary[residloc]);
         char chn[10];
         strcpy(chn, tokary[chainloc]);
+	if(modelflag==0){
+	      modelnum = atoi(tokary[modelloc]);
+	      modelflag = 1;
+	}
+	if(modelnum != atoi(tokary[modelloc])){
+	      fclose(fp);
+	      return;
+	}
         if(prevresid != resid || strcmp(prevchain, chn) != 0){
             resindx ++;
             this->size ++;

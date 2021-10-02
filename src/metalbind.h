@@ -559,6 +559,52 @@ public:
         fprintf(fp, "#\n");
     }
 
+    void fprint_pml(FILE* fp)
+    {
+	  if(this->ligand.size == 0) return;
+	  fprintf(fp, "select %s%ld%s, ",this->metal->resname, this->metal->resid, this->metal->chain);
+	  fprintf(fp, "(resi %ld and chain %s)\n", this->metal->resid, this->metal->chain);
+	  fprintf(fp, "select %s%ld%sinner, ",this->metal->resname, this->metal->resid, this->metal->chain);
+	  for(long i=0; i<this->ligand.size; ++i){
+		Atom* a = this->ligand.mol[i]->residue[ligand.resindx[i]].atom+ ligand.offset[i];
+
+		fprintf(fp, "(resi %ld and chain %s) ", a->resid, a->chain);
+	  }
+	  fprintf(fp, "\n");
+	  char loca[10];
+	  for(long i=0; i<this->ligand.size; ++i){
+		Atom* a = this->ligand.mol[i]->residue[ligand.resindx[i]].atom+ ligand.offset[i];
+		fprintf(fp, "select tmp,  (resi %ld and chain %s)\n", a->resid, a->chain);
+		fprintf(fp, "set cartoon_ring_mode, 2, tmp\n");
+		fprintf(fp, "set cartoon_ladder_mode, 0, tmp\n");
+		fprintf(fp, "color yellow, tmp\n");
+		fprintf(fp, "set cartoon_color, yellow, tmp\n");
+		fprintf(fp, "show_as cartoon, tmp\n");
+		fprintf(fp, "show line, tmp\n");
+		if(ligand.restype[i] == 'N'){
+
+		      if(ligand.loc[i] == 'N'){
+			    strcpy(loca, "NUC");
+		      }else if(ligand.loc[i] == 'P'){
+			    strcpy(loca, "PHP");
+		      }else if(ligand.loc[i] == 'S'){
+			    strcpy(loca, "SUG");
+		      }else{
+			    fprintf(stderr,"Error... Wrong type given\n");
+			    exit(EXIT_FAILURE);
+		      }
+		}else if(ligand.restype[i] == 'P'){
+		      strcpy(loca, "PRO");
+		}else if(ligand.restype[i] == 'W'){
+		      strcpy(loca, "H2O");
+		}else{
+		      fprintf(stderr,"Error... Wrong restype given\n");
+		      exit(EXIT_FAILURE);
+		}
+	  }
+
+	  //fprintf(fp, "TOTAL LIGANDS FOR %3s: %4ld",this->metal->resname, ligand.size);
+    }
     void fprint_inligand(FILE *fp){
         if(this->ligand.size == 0) return;
         fprintf(fp,"\n\n");
@@ -786,9 +832,42 @@ void comp_metal_sites(Molecule* met,
     fprintf(fp,"TER\n");
 
     //gen_verna(rna,rnabp, &rnamap, sec, sites, nsites);
+
+    char pmlfp_file_name[512];
+    file_name_join(pmlfp_file_name, file_path, file_name, ".pml");
+
+    FILE	*pmlfp;										/* output-file pointer */
+
+    pmlfp	= fopen( pmlfp_file_name, "w" );
+    if ( pmlfp == NULL ) {
+	  fprintf ( stderr, "couldn't open file '%s'; %s\n",
+		      pmlfp_file_name, strerror(errno) );
+	  exit (EXIT_FAILURE);
+    }
+
+    
+    fprintf(stderr, "Trace..... Executing File %s at line %d.\n", __FILE__, __LINE__);
+    
+    fprintf(pmlfp, "load %s.cif\n", file_name);
+    fprintf(pmlfp, "select protein, polymer.protein\n");
+    fprintf(pmlfp, "select nucleic, polymer.nucleic\n");
+    fprintf(pmlfp, "select water, solvent\n");
+    fprintf(pmlfp, "show cartoon, %s\n", file_name);
+    for(long i=0; i<nsites; ++i){
+        sites[i].fprint_pml(pmlfp);
+    }
+    
+    if( fclose(pmlfp) == EOF ) {			/* close output file   */
+	  fprintf ( stderr, "couldn't close file '%s'; %s\n",
+		      pmlfp_file_name, strerror(errno) );
+	  exit (EXIT_FAILURE);
+    }
+
+
     char nuc_file[512];
 
     file_name_join(nuc_file, file_path,file_name, ".met");
+
 
     rnamap.gen_verna(nuc_file);
 
@@ -828,18 +907,18 @@ for(long i=0; i<nres; ++i){
 }
 
 void Map::add_site(Site* site, Ligand* lig, long ligindx) {
-assert(this->mol == lig->mol[ligindx]);
-long resindx = lig->resindx[ligindx];
-if(this->metal1[resindx] == NULL){
-    this->metal1[resindx] = site;
-}else if(this->metal2[resindx] == NULL){
-    this->metal2[resindx] = site;
-}else if(this->metal3[resindx] == NULL){
-    this->metal3[resindx] = site;
-}else {
-    fprintf(stderr, "Error... too many sites bind to same molecule\n");
-    //exit(1);
-}
+      assert(this->mol == lig->mol[ligindx]);
+      long resindx = lig->resindx[ligindx];
+      if(this->metal1[resindx] == NULL){
+	    this->metal1[resindx] = site;
+      }else if(this->metal2[resindx] == NULL){
+	    this->metal2[resindx] = site;
+      }else if(this->metal3[resindx] == NULL){
+	    this->metal3[resindx] = site;
+      }else {
+	    ; //fprintf(stderr, "Error... too many sites bind to same molecule\n");
+	    //exit(1);
+      }
 }
 
 

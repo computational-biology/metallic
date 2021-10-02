@@ -153,7 +153,7 @@ public:
         if(bp != NULL){
             free(bp);
         }else{
-            printf("RNABP not freed\n");
+            ; //printf("RNABP not freed\n");
         }
     }
 };
