@@ -574,21 +574,32 @@ public:
 	  char loca[10];
 	  for(long i=0; i<this->ligand.size; ++i){
 		Atom* a = this->ligand.mol[i]->residue[ligand.resindx[i]].atom+ ligand.offset[i];
-		fprintf(fp, "select tmp,  (resi %ld and chain %s)\n", a->resid, a->chain);
-		fprintf(fp, "set cartoon_ring_mode, 2, tmp\n");
-		fprintf(fp, "set cartoon_ladder_mode, 0, tmp\n");
-		fprintf(fp, "color yellow, tmp\n");
-		fprintf(fp, "set cartoon_color, yellow, tmp\n");
-		fprintf(fp, "show_as cartoon, tmp\n");
-		fprintf(fp, "show line, tmp\n");
 		if(ligand.restype[i] == 'N'){
 
 		      if(ligand.loc[i] == 'N'){
-			    strcpy(loca, "NUC");
+			    fprintf(fp, "select tmp,  (resi %ld and chain %s)\n", a->resid, a->chain);
+			    fprintf(fp, "set cartoon_ring_mode, 2, tmp\n");
+			    fprintf(fp, "set cartoon_ladder_mode, 0, tmp\n");
+			    fprintf(fp, "color yellow, tmp\n");
+			    fprintf(fp, "set cartoon_color, yellow, tmp\n");
+			    fprintf(fp, "show_as cartoon, tmp\n");
+			    fprintf(fp, "show line, tmp\n");
 		      }else if(ligand.loc[i] == 'P'){
-			    strcpy(loca, "PHP");
+			    fprintf(fp, "select tmp,  (resi %ld and chain %s)\n", a->resid, a->chain);
+			    fprintf(fp, "set cartoon_ring_mode, 2, tmp\n");
+			    fprintf(fp, "set cartoon_ladder_mode, 0, tmp\n");
+			    fprintf(fp, "color green, tmp\n");
+			    fprintf(fp, "set cartoon_color, green, tmp\n");
+			    fprintf(fp, "show_as cartoon, tmp\n");
+			    fprintf(fp, "show line, tmp\n");
 		      }else if(ligand.loc[i] == 'S'){
-			    strcpy(loca, "SUG");
+			    fprintf(fp, "select tmp,  (resi %ld and chain %s)\n", a->resid, a->chain);
+			    fprintf(fp, "set cartoon_ring_mode, 2, tmp\n");
+			    fprintf(fp, "set cartoon_ladder_mode, 0, tmp\n");
+			    fprintf(fp, "color red, tmp\n");
+			    fprintf(fp, "set cartoon_color, red, tmp\n");
+			    fprintf(fp, "show_as cartoon, tmp\n");
+			    fprintf(fp, "show line, tmp\n");
 		      }else{
 			    fprintf(stderr,"Error... Wrong type given\n");
 			    exit(EXIT_FAILURE);
