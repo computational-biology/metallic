@@ -195,6 +195,7 @@ rnabp::rnabp(char* outfile){
     }
     if(this->nres == 0){
         fprintf(stderr, "No RNA found\n");
+	this->bp = NULL;
         fclose(fp);
         return;
     }
