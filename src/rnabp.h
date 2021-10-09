@@ -25,6 +25,16 @@ public:
     struct basepair* bp[4];
     long numbp;
 public:
+    void basepair_free(){
+
+	  
+	  for(int i=0; i<numbp; ++i){
+		free(bp[i]);
+
+		
+		bp[i] = NULL;
+	  }
+    }
     void fprint_bp_short(FILE* fp, char is_target, Atom* met, Atom* water, char sec_seq, char* loc){
         char str[3] = "> ";
         if(water != NULL){
@@ -151,6 +161,9 @@ public:
 
     ~rnabp(){
         if(bp != NULL){
+	      for(int i=0; i<nres; ++i){
+		    bp[i].basepair_free();
+	      }
             free(bp);
         }else{
             ; //printf("RNABP not freed\n");

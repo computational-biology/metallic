@@ -19,7 +19,7 @@
 
 #define MAX_SIZE 90
 #define MAX_PROX 400
-class Map;
+//class Map;
 
 
 
@@ -674,11 +674,9 @@ public:
 
     void fill_proximity(Molecule *mol, char moltype);
     void comp_nucleic(char rule,
-                 Current_params* mprm,
-    Map* map);
+                 Current_params* mprm);
     void comp_protein(char rule,
-                 Current_params* mprm,
-    Map* map);
+                 Current_params* mprm);
     void comp_water(char rule, Current_params* mprm);
 
     void comp_water_mediated(char rule, Current_params* mprm);
@@ -688,40 +686,40 @@ public:
                        Molecule* hoh,
                        Molecule* met,
                        char rule,
-                       Paremeters* prm,
-                       Map* rnamap,
-                       Map* promap);
+                       Paremeters* prm);
 
 };
-class Map{
-public:
-    Molecule* mol;
-    Site** metal1;
-    Site** metal2;
-    Site** metal3;
-public:
-    Map(Molecule* mol);
-    void add_site(Site* site, Ligand* lig, long ligindx);
-    void gen_verna(char *file){
-        //FILE* fp = fopen(file, "w");
-        //assert(fp != NULL);
-        //fprintf(fp, "<applet  code=\"VARNA.class\" codebase=\"/usr/local/\" archive=\"VARNAv3-93-src.jar\" "
-          //          "height=6000 width=4000>\n");
-        int count = 0;
-        for(long i=0; i< mol->size; ++i){
-            if(this->metal1[i] != NULL){
-                   //fprintf(fp, " WORKING\n");
-                count ++;
-            }
 
-        }
-        //fclose(fp);
-        if(count >0){
-	      ;
-        }
-    }
-};
 
+//class Map{
+//public:
+//    Molecule* mol;
+//    Site** metal1;
+//    Site** metal2;
+//    Site** metal3;
+//public:
+//    Map(Molecule* mol);
+//    void add_site(Site* site, Ligand* lig, long ligindx);
+//    void gen_verna(char *file){
+//        //FILE* fp = fopen(file, "w");
+//        //assert(fp != NULL);
+//        //fprintf(fp, "<applet  code=\"VARNA.class\" codebase=\"/usr/local/\" archive=\"VARNAv3-93-src.jar\" "
+//          //          "height=6000 width=4000>\n");
+//        int count = 0;
+//        for(long i=0; i< mol->size; ++i){
+//            if(this->metal1[i] != NULL){
+//                   //fprintf(fp, " WORKING\n");
+//                count ++;
+//            }
+//
+//        }
+//        //fclose(fp);
+//        if(count >0){
+//	      ;
+//        }
+//    }
+//};
+//
 
 
 void Site::site_populate(
@@ -730,9 +728,7 @@ void Site::site_populate(
                    Molecule* hoh,
                    Molecule* met,
                    char rule,
-                   Paremeters* prm,
-                   Map* rnamap,
-                   Map* promap){
+                   Paremeters* prm){
 
     //site_init(site);
 
@@ -746,9 +742,9 @@ void Site::site_populate(
 
 
     this->fill_proximity(rna, 'N');
-    this->comp_nucleic(rule, &mprm, rnamap);
+    this->comp_nucleic(rule, &mprm);
     this->fill_proximity(pro, 'P');
-    this->comp_protein(rule, &mprm, promap);
+    this->comp_protein(rule, &mprm);
     this->fill_proximity(hoh, 'W');
     this->comp_water(rule, &mprm);
 
@@ -780,8 +776,8 @@ void comp_metal_sites(Molecule* met,
 //	for(long i=0; i<nsites; ++i){
 //		sites[i] = (struct Site*) malloc(sizeof(struct Site));
 //	}
-    Map rnamap = Map(rna);
-    Map promap = Map(pro);
+//    Map rnamap = Map(rna);
+//    Map promap = Map(pro);
     //molecule_metal_init(&rnamap, rna);
     for(long i=0; i<nsites; ++i){
 
@@ -789,7 +785,7 @@ void comp_metal_sites(Molecule* met,
             Atom* metal = met_atoms[i];
             sites[i].add_metal(metal);
             //site_init(sites+i, met->atom+met->resbeg[i], get_atomic_no(metal->loc));
-            sites[i].site_populate(rna, pro, hoh, met, rule, prm, &rnamap, &promap); //site_populate(sites+i, rna, pro,
+            sites[i].site_populate(rna, pro, hoh, met, rule, prm); //site_populate(sites+i, rna, pro,
 
         // hoh,
         // met, rule,
@@ -857,7 +853,6 @@ void comp_metal_sites(Molecule* met,
     }
 
     
-    fprintf(stderr, "Trace..... Executing File %s at line %d.\n", __FILE__, __LINE__);
     
     fprintf(pmlfp, "load %s.cif\n", file_name);
     fprintf(pmlfp, "select protein, polymer.protein\n");
@@ -880,7 +875,7 @@ void comp_metal_sites(Molecule* met,
     file_name_join(nuc_file, file_path,file_name, ".met");
 
 
-    rnamap.gen_verna(nuc_file);
+//    rnamap.gen_verna(nuc_file);
 
     delete [] sites;
     delete [] met_atoms;
@@ -904,38 +899,37 @@ void Site::fill_proximity(Molecule *mol, char moltype) {
 
 
 
-Map::Map(Molecule* mol) {
-this->mol = mol;
-long nres = mol->size;
-this->metal1 = (Site**) malloc(nres * sizeof(Site*));
-this->metal2 = (Site**) malloc(nres * sizeof(struct Site*));
-this->metal3 = (Site**) malloc(nres * sizeof(struct Site*));
-for(long i=0; i<nres; ++i){
-    this->metal1[i] = NULL;
-    this->metal2[i] = NULL;
-    this->metal3[i] = NULL;
-}
-}
-
-void Map::add_site(Site* site, Ligand* lig, long ligindx) {
-      assert(this->mol == lig->mol[ligindx]);
-      long resindx = lig->resindx[ligindx];
-      if(this->metal1[resindx] == NULL){
-	    this->metal1[resindx] = site;
-      }else if(this->metal2[resindx] == NULL){
-	    this->metal2[resindx] = site;
-      }else if(this->metal3[resindx] == NULL){
-	    this->metal3[resindx] = site;
-      }else {
-	    ; //fprintf(stderr, "Error... too many sites bind to same molecule\n");
-	    //exit(1);
-      }
-}
-
+//Map::Map(Molecule* mol) {
+//this->mol = mol;
+//long nres = mol->size;
+//this->metal1 = (Site**) malloc(nres * sizeof(Site*));
+//this->metal2 = (Site**) malloc(nres * sizeof(struct Site*));
+//this->metal3 = (Site**) malloc(nres * sizeof(struct Site*));
+//for(long i=0; i<nres; ++i){
+//    this->metal1[i] = NULL;
+//    this->metal2[i] = NULL;
+//    this->metal3[i] = NULL;
+//}
+//}
+//
+//void Map::add_site(Site* site, Ligand* lig, long ligindx) {
+//      assert(this->mol == lig->mol[ligindx]);
+//      long resindx = lig->resindx[ligindx];
+//      if(this->metal1[resindx] == NULL){
+//	    this->metal1[resindx] = site;
+//      }else if(this->metal2[resindx] == NULL){
+//	    this->metal2[resindx] = site;
+//      }else if(this->metal3[resindx] == NULL){
+//	    this->metal3[resindx] = site;
+//      }else {
+//	    ; //fprintf(stderr, "Error... too many sites bind to same molecule\n");
+//	    //exit(1);
+//      }
+//}
+//
 
 void Site::comp_nucleic(char rule,
-                     Current_params* mprm,
-                     Map* map){
+                     Current_params* mprm){
         Atom* currmetal = this->metal;
 
 //mprm->print();
@@ -967,7 +961,7 @@ void Site::comp_nucleic(char rule,
                                    'N',
                                    rule,
                                    sqrt(dst2));
-                        map->add_site(this, &this->ligand, ligand.size-1);
+//                        map->add_site(this, &this->ligand, ligand.size-1);
                         //printf("Added NUC\n");
                     }
                 }else if(len == 3 && (curatom->loc[2] == '*' || curatom->loc[2] == '\'')){ // sugar backbone for cor
@@ -976,7 +970,7 @@ void Site::comp_nucleic(char rule,
                        ||( symb == 'C' && dst2 <= mprm->c_dst2)){
 
                         ligand.add(&prox, resindx, offset, 'S', rule, sqrt(dst2));
-                        map->add_site(this, &this->ligand, ligand.size-1);
+//                        map->add_site(this, &this->ligand, ligand.size-1);
                         //printf("Added SUG\n");
                         //molecule_metal_add_site(map, rna, site, this->proxres[resindx]);
                     }
@@ -985,7 +979,7 @@ void Site::comp_nucleic(char rule,
                        ||(len == 3 && symb == 'P' && dst2 <= mprm->p_dst2)){
 
                         ligand.add(&prox, resindx, offset, 'P', rule, sqrt(dst2));
-                        map->add_site(this, &this->ligand, ligand.size-1);
+//                        map->add_site(this, &this->ligand, ligand.size-1);
                         //printf("Added PHP\n");
                         //molecule_metal_add_site(map, rna, site, this->proxres[resindx]);
                     }
@@ -994,8 +988,7 @@ void Site::comp_nucleic(char rule,
         }
     }
 void Site::comp_protein(char rule,
-                     Current_params* mprm,
-                     Map* map){
+                     Current_params* mprm){
         Atom* currmetal = this->metal;
 
 //mprm->print();
@@ -1023,7 +1016,7 @@ void Site::comp_protein(char rule,
                        ||( symb == 'C' && dst2 <= mprm->c_dst2)){
 
                         ligand.add(&prox, resindx, offset, 'P', rule, sqrt(dst2));
-                        map->add_site(this, &this->ligand, ligand.size-1);
+//                        map->add_site(this, &this->ligand, ligand.size-1);
                         //printf("Added NUC\n");
                     }
                 //}

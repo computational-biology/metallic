@@ -13,7 +13,7 @@ public:
     long size;
 public:
     Residue();
-    void add(Atom atom);
+    void add(Atom* atom);
     void copy(Residue* residue);
     void fprint_charmm_format(FILE* fp, long corid);
     ~Residue();
@@ -21,24 +21,23 @@ public:
 
 
 
-void Residue::add(Atom atm) {
+void Residue::add(Atom* atm) {
     if(size>=40){
-        fprintf(stderr, "Error.... too many atoms in residue %s for atom id  %ld\n",this->atom[0].resname, this->atom[0]
-                .id);
+        fprintf(stderr, "Error.... too many atoms in residue %s for atom id  %ld\n",this->atom[0].resname, this->atom[0].id);
         exit(1);
     }
 
 
-    this->atom[size].type = atm.type;
-    this->atom[size].x = atm.x;
-    this->atom[size].y = atm.y;
-    this->atom[size].z = atm.z;
-    this->atom[size].id = atm.id;
-    this->atom[size].resid = atm.resid;
-    this->atom[size].occu = atm.occu;
-    strcpy(this->atom[size].chain, atm.chain);
-    strcpy(this->atom[size].resname, atm.resname);
-    strcpy(this->atom[size].loc, atm.loc);
+    this->atom[size].type = atm->type;
+    this->atom[size].x = atm->x;
+    this->atom[size].y = atm->y;
+    this->atom[size].z = atm->z;
+    this->atom[size].id = atm->id;
+    this->atom[size].resid = atm->resid;
+    this->atom[size].occu = atm->occu;
+    strcpy(this->atom[size].chain, atm->chain);
+    strcpy(this->atom[size].resname, atm->resname);
+    strcpy(this->atom[size].loc, atm->loc);
 
     this->size ++;
 }

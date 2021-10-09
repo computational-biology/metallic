@@ -169,7 +169,7 @@ void Molecule::scan_cif(char *ciffile,  int (*pf)(char *)) {
         atm.z = atof(tokary[zloc]);
         atm.occu = atof(tokary[occuloc]);
 
-        this->residue[resindx].add(atm);
+        this->residue[resindx].add(&atm);
 
         if(fgets(line, 1024, fp) == NULL) break;
         //printf("%s",line);
@@ -205,9 +205,9 @@ Molecule::Molecule(char *corfile, rnabp *rnabp) {
     long int prev_resid = -999;
     long int i= -1;
     char tmptoken[2];
+    Atom atom ;//= new Atom();
     while(fgets(line,1024, fp) != NULL){
         if(line[0] == '#') continue;
-        Atom* atom = new Atom();
         long resid;
         if(strncmp(line,"END", 3)==0){
             break;
@@ -215,53 +215,53 @@ Molecule::Molecule(char *corfile, rnabp *rnabp) {
         token = strtok(line, sep); /* skip "ATOM"*/
 
         token = strtok(NULL, sep);
-        atom->id = atol(token);
+        atom.id = atol(token);
         if(line[16] != ' '){
             tmptoken[0] = line[16];
             tmptoken[1] = '\0';
             line[16] = ' ';
             token = strtok(NULL, sep);
-            strcpy(atom->loc, token);
-            strcat(atom->loc, tmptoken);
+            strcpy(atom.loc, token);
+            strcat(atom.loc, tmptoken);
            // printf("Found %s in %s\n", atom->loc, corfile);
         }else{
 
             token = strtok(NULL, sep);
-            strcpy(atom->loc, token);
+            strcpy(atom.loc, token);
         }
-        if(atom->loc[0] == 'H') continue; // We dont consider Hydrogen
+        if(atom.loc[0] == 'H') continue; // We dont consider Hydrogen
 
         token = strtok(NULL, sep);
-        strcpy(atom->resname, token);
+        strcpy(atom.resname, token);
 
         token = strtok(NULL, sep);
         resid = atol(token);
-        atom->resid = rnabp->bp[resid-1].cifid;
+        atom.resid = rnabp->bp[resid-1].cifid;
 
         char token1[20];
         memset(token1, '\0', 20);
         strncpy(token1, line+30,8);
-        atom->x = atof(token1);
+        atom.x = atof(token1);
 
         memset(token1, '\0', 20);
         strncpy(token1, line+38,8);
-        atom->y = atof(token1);
+        atom.y = atof(token1);
 
 
 
         memset(token1, '\0', 20);
         strncpy(token1, line+46,8);
-        atom->z = atof(token1);
+        atom.z = atof(token1);
         memset(token1, '\0', 10);
         strncpy(token1, line+54,6);
-        atom->occu = atof(token1);
-        strcpy(atom->chain, rnabp->bp[resid-1].chain); // cor file does not contain chain info
-        atom->type ='A'; // normal atom. not hetatm
+        atom.occu = atof(token1);
+        strcpy(atom.chain, rnabp->bp[resid-1].chain); // cor file does not contain chain info
+        atom.type ='A'; // normal atom. not hetatm
         if(prev_resid != resid) {
             prev_resid = resid;
             i++;
         }
-        this->residue[i].add(atom);
+        this->residue[i].add(&atom);
     }
     assert(i == this->size-1);
 //    long last= residue[i].size-1;
